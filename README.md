@@ -45,7 +45,7 @@ sudo apt update
 sudo apt install albert
 ```
 
-## Google Chrome
+### Google Chrome
 
 - Get repository key
 
@@ -65,6 +65,174 @@ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /e
 sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
+
+### Spotify
+
+- Setup repository
+
+```
+sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list.d/spotify.list"
+```
+
+- Get repository key
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+```
+
+- Installation
+
+```
+sudo apt-get update
+sudo apt-get install spotify-client
+```
+
+### Snap
+
+- Installation
+
+```
+sudo apt install snapd
+```
+
+### Vlc
+
+- Installation
+
+```
+sudo snap install vlc
+```
+
+- Install media codecs
+
+```
+sudo apt install ubuntu-restricted-extras
+
+```
+
+### NodeJs
+
+- Installation
+
+```
+sudo apt install nodejs
+```
+
+### NPM
+
+- Installation
+
+```
+sudo apt install npm
+```
+
+### Pip
+
+Package installer for Python
+
+- Installation
+
+```
+sudo apt-get -y install python3-pip
+```
+
+- Python libraries
+
+```
+pip install numpy
+pip install pandas
+```
+
+### MongoDB
+
+- Installation
+
+```
+sudo apt-get install mongodb
+```
+
+### Curl
+
+- Installation
+
+```
+sudo apt install curl
+```
+
+### Install postgres
+
+- Installation
+
+```
+sudo apt install postgresql postgresql-contrib
+```
+
+### Gitkraken
+
+- Installation
+
+```
+sudo snap install gitkraken --classic
+```
+
+### Postman
+
+- Installation
+
+```
+sudo snap install postman
+```
+
+### Gnome tweak
+
+- Installation
+
+```
+sudo apt install gnome-tweak-tool
+```
+
+## Github
+
+//TODO: verify if we have to setup every git project
+
+Generate a new SSH key:
+
+```
+ssh-keygen -t rsa
+```
+
+Copy the following code on github ssh keys
+
+```
+cat ./.ssh/id_rsa.pub
+```
+
+Test generated key
+
+```
+ssh -T git@github.com
+```
+
+setup
+
+```
+git remote set-url origin git@github.com:usernameyour-repository.git
+git remote set-url origin git@gist.githubcom:fa4413eb65aa703c569bda4699c6e05d.git
+```
+
+You should not be asked for a username or password. If it works, your SSH key is correctly configured.
+
+## Clone repositories
+
+```
+git clone https://github.com/ThiagoCosta360/exercises ~/exercises
+```
+
+```
+git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
+```
+
+//TODO: git clone akiry
 
 ## Keybindings
 
@@ -197,177 +365,10 @@ plugins=(git fast-syntax-highlighting zsh-autosuggestions zsh-completions)
    please='sudo \$(fc -ln -1)'
 4. Code to select text of terminal using shift
 
-## Git
-
-```
-sudo apt install git
-```
-
-## Github
-
-//TODO: verify if we have to setup every git project
-
-Generate a new SSH key:
-
-```
-ssh-keygen -t rsa
-```
-
-Copy the following code on github ssh keys
-
-```
-cat ./.ssh/id_rsa.pub
-```
-
-Test generated key
-
-```
-ssh -T git@github.com
-```
-
-setup
-
-```
-git remote set-url origin git@github.com:usernameyour-repository.git
-git remote set-url origin git@gist.githubcom:fa4413eb65aa703c569bda4699c6e05d.git
-```
-
-You should not be asked for a username or password. If it works, your SSH key is correctly configured.
-
-## Snap
-
-```
-sudo apt install snapd
-```
-
-## Vlc
-
-Install vlc player
-
-```
-sudo snap install vlc
-```
-
-Install media codecs
-
-```
-sudo apt install ubuntu-restricted-extras
-
-```
-
-## NodeJs
-
-Install NodeJs
-
-```
-sudo apt install nodejs
-```
-
-## NPM
-
-Install node package manager
-
-```
-sudo apt install npm
-```
-
-## pip
-
-Install package installer for Python
-
-```
-sudo apt-get update
-sudo apt-get -y install python3-pip
-```
-
-Install common python libraries
-
-```
-pip install numpy
-pip install pandas
-```
-
-## MongoDB
-
-```
-sudo apt-get install mongodb
-```
-
-## Curl
-
-```
-sudo apt install curl
-```
-
-## Increase number of listeners
-
-```
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
-```
-
-## Install postgres
-
-```
-sudo apt install postgresql postgresql-contrib
-```
-
-## Configure Keyboard Shortcuts
-
-## Spotify
-
-```
-sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list.d/spotify.list"
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-sudo apt-get update
-sudo apt-get install spotify-client
-```
-
-## Gitkraken
-
-```
-sudo snap install gitkraken --classic
-```
-
-## Postman
-
-```
-sudo snap install postman
-```
-
-## Gnome tweak
-
-```
-sudo apt install gnome-tweak-tool
-```
-
-## Clone repositories
-
-```
-git clone https://github.com/ThiagoCosta360/exercises ~/exercises
-```
-
-//TODO: if I clone into projects the directory will be created?
-
-```
-mkdir projects
-```
-
-```
-git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
-```
-
-//TODO: git clone akiry
-
 ## Visual Studio Code
 
 ```
 sudo snap install --classic code
-```
-
-## Plank
-
-```
-sudo apt-get install plank
 ```
 
 ## Nautilus
