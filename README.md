@@ -282,57 +282,68 @@ git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
 - Akiry-back ortvi
 
 ```
-git clone git@bitbucket.org:akiry/docker-backend.git ~/projects/akiry-back/akiry-back/docker
-git clone git@bitbucket.org:akiry/core.git ~/projects/akiry-back/core
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/core/common
-git clone git@bitbucket.org:akiry/auth.git ~/projects/akiry-back/auth
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/auth/common
-git clone git@bitbucket.org:akiry/streaming.git ~/projects/akiry-back/streaming
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/streaming/common
-git clone git@bitbucket.org:akiry/encoding.git ~/projects/akiry-back/transcoder2/encoding
-git clone git@bitbucket.org:akiry/encoder.git ~/projects/akiry-back/transcoder2/encoder
-git clone git@bitbucket.org:akiry/orchestrator.git ~/projects/akiry-back/transcoder2/orchestrator
-git clone git@bitbucket.org:akiry/downloader.git ~/projects/akiry-back/transcoder2/mover
-git clone git@bitbucket.org:akiry/vod-transcoder.git ~/projects/akiry-back/transcoder2/vod-transcoder
+git clone git@bitbucket.org:akiry/docker-backend.git ~/projects/akiry/ortvi/ortvi-back/docker
+git clone git@bitbucket.org:akiry/core.git ~/projects/akiry/ortvi/ortvi-back/core
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/core/common
+git clone git@bitbucket.org:akiry/auth.git ~/projects/akiry/ortvi/ortvi-back/auth
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/auth/common
+git clone git@bitbucket.org:akiry/streaming.git ~/projects/akiry/ortvi/ortvi-back/streaming
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/streaming/common
+git clone git@bitbucket.org:akiry/encoding.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/encoding
+git clone git@bitbucket.org:akiry/encoder.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/encoder
+git clone git@bitbucket.org:akiry/orchestrator.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/orchestrator
+git clone git@bitbucket.org:akiry/downloader.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/mover
+git clone git@bitbucket.org:akiry/vod-transcoder.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/vod-transcoder
 ```
 
 - Akiry-front ortvi
 
 ```
-
+git clone git@bitbucket.org:akiry/akiry-webplay.git ~/projects/akiry/ortvi/ortvi-front/akiry-webplay
+git clone git@bitbucket.org:akiry/akiry-webplayer.git ~/projects/akiry/ortvi/ortvi-front/akiry-webplay/projects/akiry-player
+git clone git@bitbucket.org:akiry/akiry-webdocker.git ~/projects/akiry/ortvi/ortvi-front/akiry-webdocker
+git clone git@bitbucket.org:akiry/akiry-manager.git ~/projects/akiry/ortvi/ortvi-front/akiry-manager
+git clone git@bitbucket.org:akiry/akiry-material.git ~/projects/akiry/ortvi/ortvi-front/akiry-manager/projects/akiry-material
 ```
 
-- Akiry arsim
+- Akiry-back arsim
 
 ```
+git clone git@bitbucket.org:akiry/arsim-docker-backend.git ~/projects/akiry/arsim/arsim-back/docker
+git clone git@bitbucket.org:akiry/arsim-core.git ~/projects/akiry/arsim/arsim-back/core
+git clone git@bitbucket.org:akiry/arsim-common.git ~/projects/akiry/arsim/arsim-back/core/common
+git clone git@bitbucket.org:akiry/arsim-auth.git ~/projects/akiry/arsim/arsim-back/auth
+git clone git@bitbucket.org:akiry/arsim-common.git ~/projects/akiry/arsim/arsim-back/auth/common
+```
 
+- Akiry-front arsim
+
+```
+git clone git@bitbucket.org:akiry/arsim-aluno.git ~/projects/akiry/arsim/arsim-front/aluno
+git clone git@bitbucket.org:akiry/arsim-admin.git ~/projects/akiry/arsim/arsim-front/admin
 ```
 
 ## Keybindings
 
-```
-  ~/.gconf/desktop/gnome/keybindings
-```
+> ->configurations->shprtcuts->personal folder = super+e
 
 ## Shell
 
 //TODO: use https://github.com/zsh-users/antigen to easily change theme and plugins
-//TODO: create a dotfiles repository
-//https://github.com/Powerlevel9k/powerlevel9k/wiki/Show-Off-Your-Config
 
-Install zsh shell
+- Install zsh shell
 
 ```
 sudo apt-get install zsh
 ```
 
-Make your defaul shell
+- Make your defaul shell
 
 ```
 chsh -s &(which zsh)
 ```
 
-Install oh-my-zsh
+- Install oh-my-zsh
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -452,8 +463,10 @@ Open preferences
 -show action that empty the trash
 -in columns, check only size
 
-## remove recents
+## Remove recents
 
-go to Settings > Security & Privacy > Files & Applications and check "off"
+> Settings->Security & Privacy -> Files & Applications -> check "off"
+
+## Wallpaper
 
 //TODO: dowload and set wallpaper
