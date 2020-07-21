@@ -331,6 +331,8 @@ git clone git@bitbucket.org:akiry/arsim-admin.git ~/projects/akiry/arsim/arsim-f
 
 //TODO: use https://github.com/zsh-users/antigen to easily change theme and plugins
 
+### oh-my-zsh
+
 - Install zsh shell
 
 ```
@@ -349,75 +351,69 @@ chsh -s &(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Customization
+### improvments
 
-In Preferences:
--choose cursor form I-Bean
--enable blink cursor
--use transparance background low
+- fira code nerd font regular
 
-Repository that enable ctrl+t to search in terminal
+> Install a cool font with multiple symbols
+
+```
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+mkdir ~/.fonts
+unzip ~/Downloads/FiraCode.zip -d ~/.fonts
+```
+
+- fzf
+
+> Install repository that enable ctrl+t and ctrl+r to search on terminal
 
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-#### Font
+- gogh
 
-Installing a cool font
-
-```
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-mkdir ~/.fonts && cd ~/.fonts
-unzip ~/Downloads/FiraCode.zip
-```
-
-#### Color Scheme
-
-Install new set of colors for shell "option 131"
+> Install new set of colors for shell "option 131"
 
 ```
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ```
 
-#### LSD
+- lsd
+
+> Install the new ls
 
 ```
 sudo snap install lsd
 alias ls='lsd --group-dirs first'
 ```
 
-#### bashtop
+- bashtop
+
+> Install the new top
 
 ```
 sudo snap install bashtop
-alias top='bashtop'
 ```
 
-Open shell preferences, set pencil dark as default perfil and FiraCode Nerd Font Regular as default font
+### shell preferences
 
-####
+1. set pencil dark perfil
+2. set FiraCode Nerd Font Regular
+3. set cursor form I-Bean
+4. enable blink cursor
+5. enable transparance background low
 
-### Theme Powerlevel10K
+### Theme
 
-Clone Powerlevel theme for zsh
+- Clone Powerlevel10K theme for zsh
 
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Change .zshrc theme configuration
-
-```
-sudo vim ~/.zshrc
-```
-
-```
-ZSH_THEME="powerlevel10k/powerlevel10k"
-```
-
-Open a new terminal and configure power level with the following options
+> Configure powerlevel10k with the following options
 
 ```
 (y) (y) (y) (n) (3)Rainbow (1)Unicode (2)24-hour-format (3)Slanted (3)Slanted (4)Slanted (1)One-line (2)Sparse (2)Many-icons (1)Concise (n) (3)Verbose
@@ -431,37 +427,23 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
 
-Change .zshrc plugins list
-
-```
-sudo vim ~/.zshrc
-```
-
-```
-plugins=(git fast-syntax-highlighting zsh-autosuggestions zsh-completions)
-```
-
-1. Change theme to powerlevel10k
-2. Update plugins list
-3. Add alias
-   1. ls='lsd --group-dirs first'
-   2. top='bashtop'
-   3.
-   please='sudo \$(fc -ln -1)'
-4. Code to select text of terminal using shift
-
 ## Visual Studio Code
+
+- Installations
 
 ```
 sudo snap install --classic code
 ```
 
+> Use Settings Sync to get configuration
+
 ## Nautilus
 
-Open preferences
--enable vision in lists
--show action that empty the trash
--in columns, check only size
+- preferences
+
+1. enable vision in lists
+2. show action that empty the trash
+3. in columns, check only size
 
 ## Remove recents
 
@@ -469,4 +451,9 @@ Open preferences
 
 ## Wallpaper
 
-//TODO: dowload and set wallpaper
+- Dowload and set
+
+```
+wget https://i.pinimg.com/originals/a9/e8/60/a9e8603c729f89e6d7c427b48ab74fca.png -P ~/Imagens/wallpapers/
+gsettings set org.gnome.desktop.background picture-uri file:///home/thiago/Imagens/wallpapers/a9e8603c729f89e6d7c427b48ab74fca.png
+```
