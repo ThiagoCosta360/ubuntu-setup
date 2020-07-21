@@ -22,8 +22,6 @@ sudo apt install vim
 
 ### Albert
 
-//TODO: add a tradutor
-
 - Get repository key
 
 ```
@@ -191,36 +189,85 @@ sudo snap install postman
 sudo apt install gnome-tweak-tool
 ```
 
-## Github
+### Docker
 
-//TODO: verify if we have to setup every git project
+- Allow apt to use a repository over HTTPS:
 
-Generate a new SSH key:
+```
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+```
+
+- Get repository key
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+- Set up the stable repository
+
+```
+sudo add-apt-repository \
+   "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+- Instalation
+
+```
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+- Docker script
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+- Add to docker group
+
+```
+sudo usermod -aG docker thiago
+```
+
+## Docker compose
+
+- Install binary
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+- Execute binary
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+## Github sync with ssh
+
+- Generate a SSH key:
 
 ```
 ssh-keygen -t rsa
 ```
 
-Copy the following code on github ssh keys
+- Syncronization
+
+> Copy the public key and paste on github
 
 ```
-cat ./.ssh/id_rsa.pub
+xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
-Test generated key
-
-```
-ssh -T git@github.com
-```
-
-setup
-
-```
-git remote set-url origin git@github.com:usernameyour-repository.git
-git remote set-url origin git@gist.githubcom:fa4413eb65aa703c569bda4699c6e05d.git
-```
-
-You should not be asked for a username or password. If it works, your SSH key is correctly configured.
+> You should not be asked for a username or password. If it works, your SSH key is correctly configured.
 
 ## Clone repositories
 
@@ -232,7 +279,34 @@ git clone https://github.com/ThiagoCosta360/exercises ~/exercises
 git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
 ```
 
-//TODO: git clone akiry
+- Akiry-back ortvi
+
+```
+git clone git@bitbucket.org:akiry/docker-backend.git ~/projects/akiry-back/akiry-back/docker
+git clone git@bitbucket.org:akiry/core.git ~/projects/akiry-back/core
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/core/common
+git clone git@bitbucket.org:akiry/auth.git ~/projects/akiry-back/auth
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/auth/common
+git clone git@bitbucket.org:akiry/streaming.git ~/projects/akiry-back/streaming
+git clone git@bitbucket.org:akiry/common.git ~/projects/akiry-back/streaming/common
+git clone git@bitbucket.org:akiry/encoding.git ~/projects/akiry-back/transcoder2/encoding
+git clone git@bitbucket.org:akiry/encoder.git ~/projects/akiry-back/transcoder2/encoder
+git clone git@bitbucket.org:akiry/orchestrator.git ~/projects/akiry-back/transcoder2/orchestrator
+git clone git@bitbucket.org:akiry/downloader.git ~/projects/akiry-back/transcoder2/mover
+git clone git@bitbucket.org:akiry/vod-transcoder.git ~/projects/akiry-back/transcoder2/vod-transcoder
+```
+
+- Akiry-front ortvi
+
+```
+
+```
+
+- Akiry arsim
+
+```
+
+```
 
 ## Keybindings
 
