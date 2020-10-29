@@ -14,7 +14,7 @@ sudo apt-get -y dist-upgrade
 
 ### Vim
 
-- Installation
+-   Installation
 
 ```
 sudo apt install vim
@@ -22,13 +22,13 @@ sudo apt install vim
 
 ### Albert
 
-- Get repository key
+-   Get repository key
 
 ```
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 ```
 
-- Setup repository
+-   Setup repository
 
 ```
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
@@ -36,7 +36,7 @@ echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbunt
 sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
 ```
 
-- Installation
+-   Installation
 
 ```
 sudo apt update
@@ -45,19 +45,19 @@ sudo apt install albert
 
 ### Google Chrome
 
-- Get repository key
+-   Get repository key
 
 ```
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 ```
 
-- Setup repository
+-   Setup repository
 
 ```
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 ```
 
-- Installation
+-   Installation
 
 ```
 sudo apt-get update
@@ -66,19 +66,19 @@ sudo apt-get install google-chrome-stable
 
 ### Spotify
 
-- Setup repository
+-   Setup repository
 
 ```
 sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list.d/spotify.list"
 ```
 
-- Get repository key
+-   Get repository key
 
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 ```
 
-- Installation
+-   Installation
 
 ```
 sudo apt-get update
@@ -87,7 +87,7 @@ sudo apt-get install spotify-client
 
 ### Snap
 
-- Installation
+-   Installation
 
 ```
 sudo apt install snapd
@@ -95,13 +95,13 @@ sudo apt install snapd
 
 ### Vlc
 
-- Installation
+-   Installation
 
 ```
 sudo snap install vlc
 ```
 
-- Install media codecs
+-   Install media codecs
 
 ```
 sudo apt install ubuntu-restricted-extras
@@ -110,7 +110,7 @@ sudo apt install ubuntu-restricted-extras
 
 ### NodeJs
 
-- Installation
+-   Installation
 
 ```
 sudo apt install nodejs
@@ -118,7 +118,7 @@ sudo apt install nodejs
 
 ### NPM
 
-- Installation
+-   Installation
 
 ```
 sudo apt install npm
@@ -128,13 +128,13 @@ sudo apt install npm
 
 Package installer for Python
 
-- Installation
+-   Installation
 
 ```
 sudo apt-get -y install python3-pip
 ```
 
-- Python libraries
+-   Python libraries
 
 ```
 pip install numpy
@@ -143,7 +143,7 @@ pip install pandas
 
 ### MongoDB
 
-- Installation
+-   Installation
 
 ```
 sudo apt-get install mongodb
@@ -151,7 +151,7 @@ sudo apt-get install mongodb
 
 ### Curl
 
-- Installation
+-   Installation
 
 ```
 sudo apt install curl
@@ -159,7 +159,7 @@ sudo apt install curl
 
 ### Install postgres
 
-- Installation
+-   Installation
 
 ```
 sudo apt install postgresql postgresql-contrib
@@ -167,7 +167,7 @@ sudo apt install postgresql postgresql-contrib
 
 ### Gitkraken
 
-- Installation
+-   Installation
 
 ```
 sudo snap install gitkraken --classic
@@ -175,7 +175,7 @@ sudo snap install gitkraken --classic
 
 ### Postman
 
-- Installation
+-   Installation
 
 ```
 sudo snap install postman
@@ -183,7 +183,7 @@ sudo snap install postman
 
 ### Gnome tweak
 
-- Installation
+-   Installation
 
 ```
 sudo apt install gnome-tweak-tool
@@ -191,7 +191,7 @@ sudo apt install gnome-tweak-tool
 
 ### Docker
 
-- Allow apt to use a repository over HTTPS:
+-   Allow apt to use a repository over HTTPS:
 
 ```
 sudo apt-get install \
@@ -202,13 +202,13 @@ sudo apt-get install \
     software-properties-common
 ```
 
-- Get repository key
+-   Get repository key
 
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
-- Set up the stable repository
+-   Set up the stable repository
 
 ```
 sudo add-apt-repository \
@@ -217,21 +217,21 @@ sudo add-apt-repository \
    stable"
 ```
 
-- Instalation
+-   Instalation
 
 ```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-- Docker script
+-   Docker script
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-- Add to docker group
+-   Add to docker group
 
 ```
 sudo usermod -aG docker thiago
@@ -239,13 +239,13 @@ sudo usermod -aG docker thiago
 
 ## Docker compose
 
-- Install binary
+-   Install binary
 
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-- Execute binary
+-   Execute binary
 
 ```
 sudo chmod +x /usr/local/bin/docker-compose
@@ -253,13 +253,13 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## Github sync with ssh
 
-- Generate a SSH key:
+-   Generate a SSH key:
 
 ```
 ssh-keygen -t rsa
 ```
 
-- Syncronization
+-   Syncronization
 
 > Copy the public key and paste on github
 
@@ -279,7 +279,7 @@ git clone https://github.com/ThiagoCosta360/exercises ~/exercises
 git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
 ```
 
-- Akiry-back ortvi
+-   Akiry-back ortvi
 
 ```
 git clone git@bitbucket.org:akiry/docker-backend.git ~/projects/akiry/ortvi/ortvi-back/docker
@@ -296,7 +296,7 @@ git clone git@bitbucket.org:akiry/downloader.git ~/projects/akiry/ortvi/ortvi-ba
 git clone git@bitbucket.org:akiry/vod-transcoder.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/vod-transcoder
 ```
 
-- Akiry-front ortvi
+-   Akiry-front ortvi
 
 ```
 git clone git@bitbucket.org:akiry/akiry-webplay.git ~/projects/akiry/ortvi/ortvi-front/akiry-webplay
@@ -306,7 +306,7 @@ git clone git@bitbucket.org:akiry/akiry-manager.git ~/projects/akiry/ortvi/ortvi
 git clone git@bitbucket.org:akiry/akiry-material.git ~/projects/akiry/ortvi/ortvi-front/akiry-manager/projects/akiry-material
 ```
 
-- Akiry-back arsim
+-   Akiry-back arsim
 
 ```
 git clone git@bitbucket.org:akiry/arsim-docker-backend.git ~/projects/akiry/arsim/arsim-back/docker
@@ -316,7 +316,7 @@ git clone git@bitbucket.org:akiry/arsim-auth.git ~/projects/akiry/arsim/arsim-ba
 git clone git@bitbucket.org:akiry/arsim-common.git ~/projects/akiry/arsim/arsim-back/auth/common
 ```
 
-- Akiry-front arsim
+-   Akiry-front arsim
 
 ```
 git clone git@bitbucket.org:akiry/arsim-aluno.git ~/projects/akiry/arsim/arsim-front/aluno
@@ -333,19 +333,19 @@ git clone git@bitbucket.org:akiry/arsim-admin.git ~/projects/akiry/arsim/arsim-f
 
 ### oh-my-zsh
 
-- Install zsh shell
+-   Install zsh shell
 
 ```
 sudo apt-get install zsh
 ```
 
-- Make your defaul shell
+-   Make your defaul shell
 
 ```
 chsh -s &(which zsh)
 ```
 
-- Install oh-my-zsh
+-   Install oh-my-zsh
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -353,7 +353,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### improvments
 
-- fira code nerd font regular
+-   fira code nerd font regular
 
 > Install a cool font with multiple symbols
 
@@ -363,7 +363,7 @@ mkdir ~/.fonts
 unzip ~/Downloads/FiraCode.zip -d ~/.fonts
 ```
 
-- fzf
+-   fzf
 
 > Install repository that enable ctrl+t and ctrl+r to search on terminal
 
@@ -372,7 +372,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-- gogh
+-   gogh
 
 > Install new set of colors for shell "option 131"
 
@@ -380,7 +380,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ```
 
-- lsd
+-   lsd
 
 > Install the new ls
 
@@ -389,7 +389,7 @@ sudo snap install lsd
 alias ls='lsd --group-dirs first'
 ```
 
-- bashtop
+-   bashtop
 
 > Install the new top
 
@@ -407,7 +407,7 @@ sudo snap install bashtop
 
 ### Theme
 
-- Clone Powerlevel10K theme for zsh
+-   Clone Powerlevel10K theme for zsh
 
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -429,7 +429,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zs
 
 ## Visual Studio Code
 
-- Installations
+-   Installations
 
 ```
 sudo snap install --classic code
@@ -439,7 +439,7 @@ sudo snap install --classic code
 
 ## Nautilus
 
-- preferences
+-   preferences
 
 1. enable vision in lists
 2. show action that empty the trash
@@ -451,9 +451,51 @@ sudo snap install --classic code
 
 ## Wallpaper
 
-- Dowload and set
+-   Dowload and set
 
 ```
 wget https://i.pinimg.com/originals/a9/e8/60/a9e8603c729f89e6d7c427b48ab74fca.png -P ~/Imagens/wallpapers/
 gsettings set org.gnome.desktop.background picture-uri file:///home/thiago/Imagens/wallpapers/a9e8603c729f89e6d7c427b48ab74fca.png
 ```
+
+## Install drivers
+
+-   sudo add-apt-repository ppa:graphics-drivers/ppa
+-   ubuntu-drivers devices
+-   sudo ubuntu-drivers autoinstall
+
+## Albert-translate
+
+-   Instalation
+
+```
+pip3 install --user google-cloud-translate
+git clone git@github.com:ThiagoCosta/albert-translate.git ~/apps/albert-translate
+```
+
+-   Configuration
+    Paste the following code on '~/.config/albert/translate.ini'
+
+```
+[api]
+project_id = albert-translations
+service_key = ~/apps/albert-translate/albert-translations-0825e0747555.json
+
+[extension]
+source_lang = auto
+target_lang = pt, en, es, fr, ja
+```
+
+## Kubernetes
+
+```
+sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+```
+
+# thefuck
+
+sudo pip3 install thefuck
