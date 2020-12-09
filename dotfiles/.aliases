@@ -11,3 +11,5 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pr="cd ~/projects"
 alias g="git"
+
+# alias ls='lsd --group-dirs first'

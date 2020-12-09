@@ -1,9 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -57,7 +54,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -75,7 +72,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp fast-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(git cp zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,11 +97,22 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -="cd -"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias pr="cd ~/Projects"
+alias g="git"
+
+# Applications
 alias ls='lsd --group-dirs first'
 alias top='bashtop'
 alias please='sudo $(fc -ln -1)'
@@ -200,13 +208,13 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 
 # print thiago
-clear
-echo "
-  ████████ ██   ██ ██  █████   ██████   ██████         ██████  ███    ███ ███████ ███    ██ 
-     ██    ██   ██ ██ ██   ██ ██       ██    ██       ██    ██ ████  ████ ██      ████   ██ 
-     ██    ███████ ██ ███████ ██   ███ ██    ██ █████ ██    ██ ██ ████ ██ █████   ██ ██  ██ 
-     ██    ██   ██ ██ ██   ██ ██    ██ ██    ██       ██    ██ ██  ██  ██ ██      ██  ██ ██ 
-     ██    ██   ██ ██ ██   ██  ██████   ██████         ██████  ██      ██ ███████ ██   ████
-"
-fortune -s
-echo
+# clear
+# echo "
+#   ████████ ██   ██ ██  █████   ██████   ██████         ██████  ███    ███ ███████ ███    ██ 
+#      ██    ██   ██ ██ ██   ██ ██       ██    ██       ██    ██ ████  ████ ██      ████   ██ 
+#      ██    ███████ ██ ███████ ██   ███ ██    ██ █████ ██    ██ ██ ████ ██ █████   ██ ██  ██ 
+#      ██    ██   ██ ██ ██   ██ ██    ██ ██    ██       ██    ██ ██  ██  ██ ██      ██  ██ ██ 
+#      ██    ██   ██ ██ ██   ██  ██████   ██████         ██████  ██      ██ ███████ ██   ████
+# "
+# fortune -s
+# echo

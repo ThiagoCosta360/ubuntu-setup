@@ -12,6 +12,62 @@ sudo apt-get -y dist-upgrade
 
 ## Installing applications
 
+### Google Chrome
+
+-   Get repository key
+
+```
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+```
+
+-   Setup repository
+
+```
+sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+```
+
+-   Installation
+
+```
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
+
+### Spotify
+
+-   Installation
+
+```
+sudo snap install spotify
+```
+
+### Visual Studio Code
+
+-   Installations
+
+```
+sudo snap install --classic code
+```
+
+ -  Install settings-sync
+```
+code --install-extension shan.code-settings-sync
+```
+
+ -  Sync configurarions manually
+```
+code .
+```
+
+### Gitkraken
+
+-   Installation
+
+```
+sudo snap install gitkraken --classic
+```
+
+
 ### Vim
 
 -   Installation
@@ -43,55 +99,18 @@ sudo apt update
 sudo apt install albert
 ```
 
-### Google Chrome
-
--   Get repository key
+ -   My translator
 
 ```
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/albert-translator
+make install --directory=~/Projects/albert-translator/
 ```
 
--   Setup repository
+-    Configuration
+  > set Hotkey to 'Ctrl+Shift+Space 
+  > uncheck 'show tray icon' option
+  > set Theme to 'Numix'
 
-```
-sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-```
-
--   Installation
-
-```
-sudo apt-get update
-sudo apt-get install google-chrome-stable
-```
-
-### Spotify
-
--   Setup repository
-
-```
-sudo sh -c "echo 'deb http://repository.spotify.com stable non-free' >> /etc/apt/sources.list.d/spotify.list"
-```
-
--   Get repository key
-
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-```
-
--   Installation
-
-```
-sudo apt-get update
-sudo apt-get install spotify-client
-```
-
-### Snap
-
--   Installation
-
-```
-sudo apt install snapd
-```
 
 ### Vlc
 
@@ -137,8 +156,8 @@ sudo apt-get -y install python3-pip
 -   Python libraries
 
 ```
-pip install numpy
-pip install pandas
+pip3 install numpy
+pip3 install pandas
 ```
 
 ### MongoDB
@@ -163,14 +182,6 @@ sudo apt install curl
 
 ```
 sudo apt install postgresql postgresql-contrib
-```
-
-### Gitkraken
-
--   Installation
-
-```
-sudo snap install gitkraken --classic
 ```
 
 ### Postman
@@ -262,7 +273,7 @@ ssh-keygen -t rsa
 -   Syncronization
 
 > Copy the public key and paste on github
-
+sudo apt install xclip
 ```
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
@@ -282,50 +293,50 @@ git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
 -   Akiry-back ortvi
 
 ```
-git clone git@bitbucket.org:akiry/docker-backend.git ~/projects/akiry/ortvi/ortvi-back/docker
-git clone git@bitbucket.org:akiry/core.git ~/projects/akiry/ortvi/ortvi-back/core
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/core/common
-git clone git@bitbucket.org:akiry/auth.git ~/projects/akiry/ortvi/ortvi-back/auth
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/auth/common
-git clone git@bitbucket.org:akiry/streaming.git ~/projects/akiry/ortvi/ortvi-back/streaming
-git clone git@bitbucket.org:akiry/common.git ~/projects/akiry/ortvi/ortvi-back/streaming/common
-git clone git@bitbucket.org:akiry/encoding.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/encoding
-git clone git@bitbucket.org:akiry/encoder.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/encoder
-git clone git@bitbucket.org:akiry/orchestrator.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/orchestrator
-git clone git@bitbucket.org:akiry/downloader.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/mover
-git clone git@bitbucket.org:akiry/vod-transcoder.git ~/projects/akiry/ortvi/ortvi-back/transcoder2/vod-transcoder
+git clone git@bitbucket.org:akiry/docker-backend.git ~/Projects/akiry/ortvi/ortvi-back/docker
+git clone git@bitbucket.org:akiry/core.git ~/Projects/akiry/ortvi/ortvi-back/core
+git clone git@bitbucket.org:akiry/common.git ~/Projects/akiry/ortvi/ortvi-back/core/common
+git clone git@bitbucket.org:akiry/auth.git ~/Projects/akiry/ortvi/ortvi-back/auth
+git clone git@bitbucket.org:akiry/common.git ~/Projects/akiry/ortvi/ortvi-back/auth/common
+git clone git@bitbucket.org:akiry/streaming.git ~/Projects/akiry/ortvi/ortvi-back/streaming
+git clone git@bitbucket.org:akiry/common.git ~/Projects/akiry/ortvi/ortvi-back/streaming/common
+git clone git@bitbucket.org:akiry/encoding.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/encoding
+git clone git@bitbucket.org:akiry/encoder.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/encoder
+git clone git@bitbucket.org:akiry/orchestrator.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/orchestrator
+git clone git@bitbucket.org:akiry/downloader.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/mover
+git clone git@bitbucket.org:akiry/vod-transcoder.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/vod-transcoder
 ```
 
 -   Akiry-front ortvi
 
 ```
-git clone git@bitbucket.org:akiry/akiry-webplay.git ~/projects/akiry/ortvi/ortvi-front/akiry-webplay
-git clone git@bitbucket.org:akiry/akiry-webplayer.git ~/projects/akiry/ortvi/ortvi-front/akiry-webplay/projects/akiry-player
-git clone git@bitbucket.org:akiry/akiry-webdocker.git ~/projects/akiry/ortvi/ortvi-front/akiry-webdocker
-git clone git@bitbucket.org:akiry/akiry-manager.git ~/projects/akiry/ortvi/ortvi-front/akiry-manager
-git clone git@bitbucket.org:akiry/akiry-material.git ~/projects/akiry/ortvi/ortvi-front/akiry-manager/projects/akiry-material
+git clone git@bitbucket.org:akiry/akiry-webplay.git ~/Projects/akiry/ortvi/ortvi-front/akiry-webplay
+git clone git@bitbucket.org:akiry/akiry-webplayer.git ~/Projects/akiry/ortvi/ortvi-front/akiry-webplay/projects/akiry-player
+git clone git@bitbucket.org:akiry/akiry-webdocker.git ~/Projects/akiry/ortvi/ortvi-front/akiry-webdocker
+git clone git@bitbucket.org:akiry/akiry-manager.git ~/Projects/akiry/ortvi/ortvi-front/akiry-manager
+git clone git@bitbucket.org:akiry/akiry-material.git ~/Projects/akiry/ortvi/ortvi-front/akiry-manager/projects/akiry-material
 ```
 
 -   Akiry-back arsim
 
 ```
-git clone git@bitbucket.org:akiry/arsim-docker-backend.git ~/projects/akiry/arsim/arsim-back/docker
-git clone git@bitbucket.org:akiry/arsim-core.git ~/projects/akiry/arsim/arsim-back/core
-git clone git@bitbucket.org:akiry/arsim-common.git ~/projects/akiry/arsim/arsim-back/core/common
-git clone git@bitbucket.org:akiry/arsim-auth.git ~/projects/akiry/arsim/arsim-back/auth
-git clone git@bitbucket.org:akiry/arsim-common.git ~/projects/akiry/arsim/arsim-back/auth/common
+git clone git@bitbucket.org:akiry/arsim-docker-backend.git ~/Projects/akiry/arsim/arsim-back/docker
+git clone git@bitbucket.org:akiry/arsim-core.git ~/Projects/akiry/arsim/arsim-back/core
+git clone git@bitbucket.org:akiry/arsim-common.git ~/Projects/akiry/arsim/arsim-back/core/common
+git clone git@bitbucket.org:akiry/arsim-auth.git ~/Projects/akiry/arsim/arsim-back/auth
+git clone git@bitbucket.org:akiry/arsim-common.git ~/Projects/akiry/arsim/arsim-back/auth/common
 ```
 
 -   Akiry-front arsim
 
 ```
-git clone git@bitbucket.org:akiry/arsim-aluno.git ~/projects/akiry/arsim/arsim-front/aluno
-git clone git@bitbucket.org:akiry/arsim-admin.git ~/projects/akiry/arsim/arsim-front/admin
+git clone git@bitbucket.org:akiry/arsim-aluno.git ~/Projects/akiry/arsim/arsim-front/aluno
+git clone git@bitbucket.org:akiry/arsim-admin.git ~/Projects/akiry/arsim/arsim-front/admin
 ```
 
 ## Keybindings
 
-> ->configurations->shprtcuts->personal folder = super+e
+> ->Settings->Keyboard Shortcuts->Home Folder = super+e
 
 ## Shell
 
@@ -358,7 +369,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 > Install a cool font with multiple symbols
 
 ```
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget -P ~/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 mkdir ~/.fonts
 unzip ~/Downloads/FiraCode.zip -d ~/.fonts
 ```
@@ -368,16 +379,19 @@ unzip ~/Downloads/FiraCode.zip -d ~/.fonts
 > Install repository that enable ctrl+t and ctrl+r to search on terminal
 
 ```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/src/.fzf
+~/src/.fzf/install
 ```
 
 -   gogh
 
-> Install new set of colors for shell "option 131"
+> Install new set of colors for shell - Pencil Dark
 
 ```
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
+mkdir  ~/src
+git clone https://github.com/Mayccoll/Gogh.git ~/src/gogh
+export TERMINAL=gnome-terminal
+/home/thiago/src/gogh/themes/pencil-dark.sh
 ```
 
 -   lsd
@@ -386,7 +400,6 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 ```
 sudo snap install lsd
-alias ls='lsd --group-dirs first'
 ```
 
 -   bashtop
@@ -416,7 +429,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 > Configure powerlevel10k with the following options
 
 ```
-(y) (y) (y) (n) (3)Rainbow (1)Unicode (2)24-hour-format (3)Slanted (3)Slanted (4)Slanted (1)One-line (2)Sparse (2)Many-icons (1)Concise (n) (3)Verbose
+p10k configure
+```
+
+```
+(y) (y) (y) (n) (3)Rainbow (1)Unicode (2)24-hour-format (3)Slanted (3)Slanted (1)Flat (1)One-line (2)Sparse (2)Many-icons (1)Concise (n) (3)Verbose
 ```
 
 ### Plugins
@@ -427,27 +444,19 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
 
-## Visual Studio Code
 
--   Installations
-
-```
-sudo snap install --classic code
-```
-
-> Use Settings Sync to get configuration
 
 ## Nautilus
 
 -   preferences
-
+  
 1. enable vision in lists
-2. show action that empty the trash
-3. in columns, check only size
+2. show hidden files
+3. sort folders before files
+4. allow folders to be expanded
+5. show action that empty the trash
+6. in columns, check only size
 
-## Remove recents
-
-> Settings->Security & Privacy -> Files & Applications -> check "off"
 
 ## Wallpaper
 
@@ -486,16 +495,38 @@ source_lang = auto
 target_lang = pt, en, es, fr, ja
 ```
 
-## Kubernetes
-
+## Cursor
 ```
-sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubectl
+https://www.gnome-look.org/p/1148692/
 ```
 
-# thefuck
+## Docky
+```
+sudo add-apt-repository ppa:ricotz/docky
+sudo apt -y update
+sudo apt -y install plank
+```
 
-sudo pip3 install thefuck
+## Uninstall
+```
+sudo apt -y remove aisleriot
+sudo apt -y autoremove aisleriot
+sudo apt -y remove gnome-mines
+sudo apt -y autoremove gnome-mines
+sudo apt -y remove gnome-sudoku
+sudo apt -y autoremove gnome-sudoku
+sudo apt -y remove gnome-mahjongg
+sudo apt -y autoremove gnome-mahjongg
+sudo apt -y remove thunderbird
+sudo apt -y autoremove thunderbird
+```
+
+## Start Aplications
+
+```
+Start-up Applications > add Plank, add Albert
+```
+```
+Tweaks > Extensions > Desktop Icons > Disable personal folder
+```
+
