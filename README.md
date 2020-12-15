@@ -1,3 +1,5 @@
+<H1> Thiago </h1>
+
 # QUICK SETUP FOR UBUNTU DEVELOPMENT ENVIRONMENT
 
 <img src="https://image.flaticon.com/icons/png/512/888/888879.png" alt="logo ubuntu" width="50">
@@ -9,7 +11,6 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
 ```
-
 ## Installing applications
 
 ### Google Chrome
