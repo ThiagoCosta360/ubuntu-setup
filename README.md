@@ -104,7 +104,7 @@ sudo apt install albert
 
 ```
 git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/albert-translator
-make install --directory=~/Projects/albert-translator/
+make install --directory=~/Projects/personal/albert-translator/
 ```
 
 -    Configuration
@@ -474,7 +474,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/thiago/Image
 -   ubuntu-drivers devices
 -   sudo ubuntu-drivers autoinstall
 
-## Albert-translate
+<!-- ## Albert-translate
 
 -   Instalation
 
@@ -494,7 +494,7 @@ service_key = ~/apps/albert-translate/albert-translations-0825e0747555.json
 [extension]
 source_lang = auto
 target_lang = pt, en, es, fr, ja
-```
+``` -->
 
 ## Cursor
 ```
@@ -531,3 +531,9 @@ Start-up Applications > add Plank, add Albert
 Tweaks > Extensions > Desktop Icons > Disable personal folder
 ```
 
+## Teams
+
+```
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list
+```

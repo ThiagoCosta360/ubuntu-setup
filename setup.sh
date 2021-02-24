@@ -46,8 +46,8 @@
 # sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
 # sudo apt update
 # sudo apt install albert
-# git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/albert-translator
-# make install --directory=~/Projects/albert-translator/
+# git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/personal/albert-translator
+# make install --directory=~/Projects/personal/albert-translator/
 # ---------------------------------------
 
 # -------------Fortune-----------------
@@ -110,9 +110,9 @@
 # ---------------------------------------
 
 # -------------MyRepos---------
-# git clone git@github.com:ThiagoCosta360/exercises.git ~/Projects/exercises
-# git clone git@github.com:ThiagoCosta360/portfolio.git ~/Projects/portfolio
-# git clone git@github.com:ThiagoCosta360/ais.git ~/Projects/ais
+# git clone git@github.com:ThiagoCosta360/exercises.git ~/Projects/personal/exercises
+# git clone git@github.com:ThiagoCosta360/portfolio.git ~/Projects/personal/portfolio
+# git clone git@github.com:ThiagoCosta360/ais.git ~/Projects/personal/ais
 # ---------------------------------------
 
 # -------------OrtviBack--------------
@@ -156,6 +156,12 @@
 # git clone git@bitbucket.org:akiry/akiry-webplayer.git ~/Projects/akiry/case/case-front/case-web/projects/akiry-player
 # git clone git@bitbucket.org:akiry/docker-case.git ~/Projects/akiry/case/case-front/docker-case
 # ---------------------------------------
+
+git clone git@bitbucket.org:akiry/akiry-webplay.git ~/Projects/akiry/reviver/reviver-front/akiry-webplay
+git clone git@bitbucket.org:akiry/akiry-webplayer.git ~/Projects/akiry/reviver/reviver-front/akiry-webplay/projects/akiry-player
+git clone git@bitbucket.org:akiry/akiry-webdocker.git ~/Projects/akiry/reviver/reviver-front/akiry-webdocker
+
+git clone git@bitbucket.org:akiry/akiry-webakiry.git ~/Projects/akiry/institutional/akiry-webakiry
 
 # -------------Zsh---------------------
 # sudo apt -y install zsh
