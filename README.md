@@ -474,27 +474,6 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/thiago/Image
 -   ubuntu-drivers devices
 -   sudo ubuntu-drivers autoinstall
 
-<!-- ## Albert-translate
-
--   Instalation
-
-```
-pip3 install --user google-cloud-translate
-git clone git@github.com:ThiagoCosta/albert-translate.git ~/apps/albert-translate
-```
-
--   Configuration
-    Paste the following code on '~/.config/albert/translate.ini'
-
-```
-[api]
-project_id = albert-translations
-service_key = ~/apps/albert-translate/albert-translations-0825e0747555.json
-
-[extension]
-source_lang = auto
-target_lang = pt, en, es, fr, ja
-``` -->
 
 ## Cursor
 ```
