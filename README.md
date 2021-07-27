@@ -11,23 +11,24 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
 ```
+
 ## Installing applications
 
 ### Google Chrome
 
--   Get repository key
+- Get repository key
 
 ```
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 ```
 
--   Setup repository
+- Setup repository
 
 ```
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 ```
 
--   Installation
+- Installation
 
 ```
 sudo apt-get update
@@ -36,7 +37,7 @@ sudo apt-get install google-chrome-stable
 
 ### Spotify
 
--   Installation
+- Installation
 
 ```
 sudo snap install spotify
@@ -44,34 +45,35 @@ sudo snap install spotify
 
 ### Visual Studio Code
 
--   Installations
+- Installations
 
 ```
 sudo snap install --classic code
 ```
 
- -  Install settings-sync
+- Install settings-sync
+
 ```
 code --install-extension shan.code-settings-sync
 ```
 
- -  Sync configurarions manually
+- Sync configurarions manually
+
 ```
 code .
 ```
 
 ### Gitkraken
 
--   Installation
+- Installation
 
 ```
 sudo snap install gitkraken --classic
 ```
 
-
 ### Vim
 
--   Installation
+- Installation
 
 ```
 sudo apt install vim
@@ -79,13 +81,13 @@ sudo apt install vim
 
 ### Albert
 
--   Get repository key
+- Get repository key
 
 ```
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 ```
 
--   Setup repository
+- Setup repository
 
 ```
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
@@ -93,35 +95,34 @@ echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbunt
 sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
 ```
 
--   Installation
+- Installation
 
 ```
 sudo apt update
 sudo apt install albert
 ```
 
- -   My translator
+- My translator
 
 ```
-git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/albert-translator
+git clone git@github.com:ThiagoCosta360/albert-translator.git ~/Projects/personal/albert-translator
 make install --directory=~/Projects/personal/albert-translator/
 ```
 
--    Configuration
-  > set Hotkey to 'Ctrl+Shift+Space 
+- Configuration
+  > set Hotkey to 'Ctrl+Shift+Space
   > uncheck 'show tray icon' option
   > set Theme to 'Numix'
 
-
 ### Vlc
 
--   Installation
+- Installation
 
 ```
 sudo snap install vlc
 ```
 
--   Install media codecs
+- Install media codecs
 
 ```
 sudo apt install ubuntu-restricted-extras
@@ -130,7 +131,7 @@ sudo apt install ubuntu-restricted-extras
 
 ### NodeJs
 
--   Installation
+- Installation
 
 ```
 sudo apt install nodejs
@@ -138,7 +139,7 @@ sudo apt install nodejs
 
 ### NPM
 
--   Installation
+- Installation
 
 ```
 sudo apt install npm
@@ -148,13 +149,13 @@ sudo apt install npm
 
 Package installer for Python
 
--   Installation
+- Installation
 
 ```
 sudo apt-get -y install python3-pip
 ```
 
--   Python libraries
+- Python libraries
 
 ```
 pip3 install numpy
@@ -163,7 +164,7 @@ pip3 install pandas
 
 ### MongoDB
 
--   Installation
+- Installation
 
 ```
 sudo apt-get install mongodb
@@ -171,7 +172,7 @@ sudo apt-get install mongodb
 
 ### Curl
 
--   Installation
+- Installation
 
 ```
 sudo apt install curl
@@ -179,7 +180,7 @@ sudo apt install curl
 
 ### Install postgres
 
--   Installation
+- Installation
 
 ```
 sudo apt install postgresql postgresql-contrib
@@ -187,7 +188,7 @@ sudo apt install postgresql postgresql-contrib
 
 ### Postman
 
--   Installation
+- Installation
 
 ```
 sudo snap install postman
@@ -195,7 +196,7 @@ sudo snap install postman
 
 ### Gnome tweak
 
--   Installation
+- Installation
 
 ```
 sudo apt install gnome-tweak-tool
@@ -203,7 +204,7 @@ sudo apt install gnome-tweak-tool
 
 ### Docker
 
--   Allow apt to use a repository over HTTPS:
+- Allow apt to use a repository over HTTPS:
 
 ```
 sudo apt-get install \
@@ -214,13 +215,13 @@ sudo apt-get install \
     software-properties-common
 ```
 
--   Get repository key
+- Get repository key
 
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
--   Set up the stable repository
+- Set up the stable repository
 
 ```
 sudo add-apt-repository \
@@ -229,21 +230,21 @@ sudo add-apt-repository \
    stable"
 ```
 
--   Instalation
+- Instalation
 
 ```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
--   Docker script
+- Docker script
 
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh
+curl -fsSL https://get.docker.com -o ./scripts/get-docker.sh
 sudo sh get-docker.sh
 ```
 
--   Add to docker group
+- Add to docker group
 
 ```
 sudo usermod -aG docker thiago
@@ -251,13 +252,13 @@ sudo usermod -aG docker thiago
 
 ## Docker compose
 
--   Install binary
+- Install binary
 
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
--   Execute binary
+- Execute binary
 
 ```
 sudo chmod +x /usr/local/bin/docker-compose
@@ -265,16 +266,17 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## Github sync with ssh
 
--   Generate a SSH key:
+- Generate a SSH key:
 
 ```
 ssh-keygen -t rsa
 ```
 
--   Syncronization
+- Syncronization
 
 > Copy the public key and paste on github
-sudo apt install xclip
+> sudo apt install xclip
+
 ```
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
@@ -288,10 +290,10 @@ git clone https://github.com/ThiagoCosta360/exercises ~/exercises
 ```
 
 ```
-git clone https://github.com/ThiagoCosta360/portfolio ~/projects/portfolio
+git clone https://github.com/ThiagoCosta360/portfolio ~/Projects/personal/portfolio
 ```
 
--   Akiry-back ortvi
+- Akiry-back ortvi
 
 ```
 git clone git@bitbucket.org:akiry/docker-backend.git ~/Projects/akiry/ortvi/ortvi-back/docker
@@ -308,7 +310,7 @@ git clone git@bitbucket.org:akiry/downloader.git ~/Projects/akiry/ortvi/ortvi-ba
 git clone git@bitbucket.org:akiry/vod-transcoder.git ~/Projects/akiry/ortvi/ortvi-back/transcoder2/vod-transcoder
 ```
 
--   Akiry-front ortvi
+- Akiry-front ortvi
 
 ```
 git clone git@bitbucket.org:akiry/akiry-webplay.git ~/Projects/akiry/ortvi/ortvi-front/akiry-webplay
@@ -318,7 +320,7 @@ git clone git@bitbucket.org:akiry/akiry-manager.git ~/Projects/akiry/ortvi/ortvi
 git clone git@bitbucket.org:akiry/akiry-material.git ~/Projects/akiry/ortvi/ortvi-front/akiry-manager/projects/akiry-material
 ```
 
--   Akiry-back arsim
+- Akiry-back arsim
 
 ```
 git clone git@bitbucket.org:akiry/arsim-docker-backend.git ~/Projects/akiry/arsim/arsim-back/docker
@@ -328,7 +330,7 @@ git clone git@bitbucket.org:akiry/arsim-auth.git ~/Projects/akiry/arsim/arsim-ba
 git clone git@bitbucket.org:akiry/arsim-common.git ~/Projects/akiry/arsim/arsim-back/auth/common
 ```
 
--   Akiry-front arsim
+- Akiry-front arsim
 
 ```
 git clone git@bitbucket.org:akiry/arsim-aluno.git ~/Projects/akiry/arsim/arsim-front/aluno
@@ -345,19 +347,19 @@ git clone git@bitbucket.org:akiry/arsim-admin.git ~/Projects/akiry/arsim/arsim-f
 
 ### oh-my-zsh
 
--   Install zsh shell
+- Install zsh shell
 
 ```
 sudo apt-get install zsh
 ```
 
--   Make your defaul shell
+- Make your defaul shell
 
 ```
 chsh -s &(which zsh)
 ```
 
--   Install oh-my-zsh
+- Install oh-my-zsh
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -365,7 +367,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### improvments
 
--   fira code nerd font regular
+- fira code nerd font regular
 
 > Install a cool font with multiple symbols
 
@@ -375,27 +377,28 @@ mkdir ~/.fonts
 unzip ~/Downloads/FiraCode.zip -d ~/.fonts
 ```
 
--   fzf
+- fzf
 
 > Install repository that enable ctrl+t and ctrl+r to search on terminal
 
 ```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/src/.fzf
-~/src/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/scripts/.fzf
+~/scripts/.fzf/install
 ```
 
--   gogh
+- gogh
 
 > Install new set of colors for shell - Pencil Dark
 
 ```
-mkdir  ~/src
-git clone https://github.com/Mayccoll/Gogh.git ~/src/gogh
+mkdir  ~/scripts
+git clone https://github.com/Mayccoll/Gogh.git ~/scripts/gogh
 export TERMINAL=gnome-terminal
-/home/thiago/src/gogh/themes/pencil-dark.sh
+> create profile on preferences: default_profile
+/home/thiago/scripts/gogh/themes/pencil-dark.sh
 ```
 
--   lsd
+- lsd
 
 > Install the new ls
 
@@ -403,7 +406,7 @@ export TERMINAL=gnome-terminal
 sudo snap install lsd
 ```
 
--   bashtop
+- bashtop
 
 > Install the new top
 
@@ -421,7 +424,7 @@ sudo snap install bashtop
 
 ### Theme
 
--   Clone Powerlevel10K theme for zsh
+- Clone Powerlevel10K theme for zsh
 
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -445,12 +448,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
 
-
-
 ## Nautilus
 
--   preferences
-  
+- preferences
+
 1. enable vision in lists
 2. show hidden files
 3. sort folders before files
@@ -458,10 +459,9 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zs
 5. show action that empty the trash
 6. in columns, check only size
 
-
 ## Wallpaper
 
--   Dowload and set
+- Dowload and set
 
 ```
 wget https://i.pinimg.com/originals/a9/e8/60/a9e8603c729f89e6d7c427b48ab74fca.png -P ~/Imagens/wallpapers/
@@ -470,17 +470,18 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/thiago/Image
 
 ## Install drivers
 
--   sudo add-apt-repository ppa:graphics-drivers/ppa
--   ubuntu-drivers devices
--   sudo ubuntu-drivers autoinstall
-
+- sudo add-apt-repository ppa:graphics-drivers/ppa
+- ubuntu-drivers devices
+- sudo ubuntu-drivers autoinstall
 
 ## Cursor
+
 ```
 https://www.gnome-look.org/p/1148692/
 ```
 
 ## Docky
+
 ```
 sudo add-apt-repository ppa:ricotz/docky
 sudo apt -y update
@@ -488,6 +489,7 @@ sudo apt -y install plank
 ```
 
 ## Uninstall
+
 ```
 sudo apt -y remove aisleriot
 sudo apt -y autoremove aisleriot
@@ -506,6 +508,7 @@ sudo apt -y autoremove thunderbird
 ```
 Start-up Applications > add Plank, add Albert
 ```
+
 ```
 Tweaks > Extensions > Desktop Icons > Disable personal folder
 ```
